@@ -1,7 +1,10 @@
 var searchFormEl = document.querySelector('#search-form');
+var fiveDay = document.querySelector('#five-day');
 var lat = 0;
 var lon = 0;
 var tempTest =[];
+var wind = [];
+var humidity = [];
 
 function handleSearchFormSubmit(event){
     event.preventDefault();
@@ -39,6 +42,15 @@ function getWeather(lat, lon){
         if(response.ok){
             response.json().then(function(data){
                 for(var i =0; i < 5; i++){
+                    var date = data.list[x].dt_txt.split(' ')[0];
+                    var card = document.createElement('div');
+                    card.classList.add('card');
+                    var body = document.createElement('p');
+                    body.innerHTML = 
+                    '<strong>' + date.split('-')[1]+'/'+date.split('-')[2]+'/'+date.split('-')[0]+ '</strong>';
+                    
+                    card.append(body);
+                    fiveDay.append(card);
                     tempTest = data.list[x].main.temp
                     x = x+8;
                 }
