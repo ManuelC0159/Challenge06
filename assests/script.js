@@ -43,7 +43,7 @@ function getWeather(lat, lon){
         if(response.ok){
             response.json().then(function(data){
                 for(var i =0; i < 5; i++){
-                    console.log(data.list[x]);
+                    console.log(data);
                     var date = data.list[x].dt_txt.split(' ')[0];
                     var card = document.createElement('div');
                     card.classList.add('card');
@@ -64,7 +64,6 @@ function getWeather(lat, lon){
                     "Humidity: " + data.list[x].main.humidity + "%";
                     card.append(time, icon,temp, wind, humidity);
                     fiveDay.append(card);
-                    //console.log(data.list.main.dt_txt);
                     x = x+8;
                 }
             })
