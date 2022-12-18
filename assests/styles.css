@@ -32,9 +32,47 @@
     position:absolute;
     margin-top: 50px;
     flex-direction: column;
+
 }
 .btn{
+    border-radius: 5px;
+    border: 1px solid #000;
     margin-right: 20px;
     margin-bottom: 25px;
     width: 300px;
+    cursor: pointer;
+    background-color: lightgrey;
+    height: 20px;
+}
+
+.input{
+    margin-top: 10px;
+    height: 25px;
+}
+
+.searchBtn{
+    height: 20px;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: -170px;
+    width: 300px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #000;
+    height: 20px;
+    background-color: lightskyblue;
+}
+.search-form{
+    border-bottom: 3px solid #000;
+    height: 80px;
+    width: 300px;
+}
+
+.top-screen{
+    background-image: linear-gradient(to right, lightblue, darkblue);
+    //background-color: blue;
+    color:white;
+    height: 100px;
+    text-align: center;
+    font-size: 50px;
 }
