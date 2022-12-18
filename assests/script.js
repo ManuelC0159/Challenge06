@@ -110,7 +110,7 @@ function buttonSetUp(){
 
 function display(searchInputVal){
     var apiUrl
-    = "http://api.openweathermap.org/geo/1.0/direct?q=" + searchInputVal + "&limit=5&appid=a14ace2b2c6252a8f47e6628c07badaa";
+    = "https://api.openweathermap.org/geo/1.0/direct?q=" + searchInputVal + "&limit=5&appid=a14ace2b2c6252a8f47e6628c07badaa";
     fetch(apiUrl)
         .then(function(response){
             if(response.ok){
